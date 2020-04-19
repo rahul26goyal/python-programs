@@ -6,7 +6,7 @@ def find_element(numbers, element):
         index = -1
         for num in numbers:
             index += 1
-            if num == x:
+            if num == element:
                 return index
         return -1
     else:
