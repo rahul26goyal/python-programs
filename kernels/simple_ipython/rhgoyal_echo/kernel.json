@@ -1,0 +1,12 @@
+{"argv":[
+  "python",
+  "-m",
+  "echo_kernel",
+  "-f",
+  "{connection_file}"
+  ],
+  "display_name":"RhGoyalEcho (ipyKernel wrapper)",
+  "metadata": {
+    "debugger": true
+  }
+}
