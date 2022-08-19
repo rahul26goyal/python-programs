@@ -1,5 +1,3 @@
-
-
 from array.binary_search import _binary_search_impl
 
 
@@ -21,7 +19,6 @@ def search_in_rotated_array(elements, num):
         _binary_search_impl(elements, 0, pivot - 1, num)
 
 
-
 def find_pivot(arr, start, end):
     """Returns the pivot index of the left rotated array: pivot index is the end index of
     first half sorted array [0...pivotInfrx...end]
@@ -31,11 +28,11 @@ def find_pivot(arr, start, end):
     if start == end:
         return start
     elif start < end:
-        mid = int(start + (end- start)/2)
+        mid = int(start + (end - start) / 2)
         if mid < end and arr[mid] > arr[mid + 1]:
             return mid
-        elif mid > start and arr[mid] < arr[mid -1]:
-            return mid -1
+        elif mid > start and arr[mid] < arr[mid - 1]:
+            return mid - 1
 
         if arr[start] > arr[mid]:
             return find_pivot(arr, start, mid - 1)
