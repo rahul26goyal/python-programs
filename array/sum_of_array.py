@@ -1,4 +1,4 @@
-# Write a program to calculate sum of all numbers present in a list.
+# Write a program to calculate sum of all numbers_1 present in a list.
 
 
 def sum_of_array(array):
