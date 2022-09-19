@@ -1,4 +1,3 @@
-
 def run():
     print("hi")
     int_value = 12
@@ -16,5 +15,5 @@ def run():
         print("String value: %s" % string_value)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     run()

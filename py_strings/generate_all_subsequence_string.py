@@ -17,7 +17,9 @@ def generate_all_subsequence(input_string, substring, curr_index):
         if substring != "":
             print("Subsequence: {}".format(substring))
         return
-    generate_all_subsequence(input_string, substring + input_string[curr_index], curr_index + 1)
+    generate_all_subsequence(
+        input_string, substring + input_string[curr_index], curr_index + 1
+    )
     generate_all_subsequence(input_string, substring, curr_index + 1)
 
 
@@ -27,8 +29,9 @@ def get_all_subsequence(input_string, substring, curr_index):
             print("Subsequence: {}".format(substring))
             return [substring]
         return []
-    return get_all_subsequence(input_string, substring + input_string[curr_index],
-                               curr_index + 1) + get_all_subsequence(input_string, substring, curr_index + 1)
+    return get_all_subsequence(
+        input_string, substring + input_string[curr_index], curr_index + 1
+    ) + get_all_subsequence(input_string, substring, curr_index + 1)
 
 
 if __name__ == "__main__":

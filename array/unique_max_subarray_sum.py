@@ -19,7 +19,7 @@ def get_max_unique_subarray_sum(input_list):
     for i in range(len(input_list)):
         sum_arr.insert(i, 0)  # initialize the list with 0 values.
 
-    i = 0 # starting from begnning
+    i = 0  # starting from begnning
     while i < len(input_list):
         ele = input_list[i]
         if cur_subarray.get(ele) is None:  # ele does not exist
@@ -47,7 +47,9 @@ def get_max_unique_subarray_sum_alternate(input_list):
     input_size = len(input_list)
     if input_size == 0:
         return 0
-    subarray_set = set()  # declare an empty set which stores the current set of unique element.
+    subarray_set = (
+        set()
+    )  # declare an empty set which stores the current set of unique element.
     # print(type(subarray_set))
     i = 0  # two pointers to track the current subarray index.
     j = 1
@@ -60,8 +62,12 @@ def get_max_unique_subarray_sum_alternate(input_list):
         if ele in subarray_set:
             # print("element already exist....")
             cur_sum = cur_sum - input_list[i]
-            subarray_set.remove(input_list[i])  # remove the ith element from current subarray
-            i = i + 1  # increment i while keep j the same..this happens until the duplicate element index is reached.
+            subarray_set.remove(
+                input_list[i]
+            )  # remove the ith element from current subarray
+            i = (
+                i + 1
+            )  # increment i while keep j the same..this happens until the duplicate element index is reached.
         else:
             # print("ele does not exist: ")
             subarray_set.add(ele)  # add element into the set
@@ -73,15 +79,15 @@ def get_max_unique_subarray_sum_alternate(input_list):
 
 if __name__ == "__main__":
     print("Result:" + str(get_max_unique_subarray_sum([])))
-    print("Result:" + str(get_max_unique_subarray_sum([4,2,4,5,6])))
-    print("Result:" + str(get_max_unique_subarray_sum([4,2,4,5,6,4])))
+    print("Result:" + str(get_max_unique_subarray_sum([4, 2, 4, 5, 6])))
+    print("Result:" + str(get_max_unique_subarray_sum([4, 2, 4, 5, 6, 4])))
     print("Result:" + str(get_max_unique_subarray_sum([6, 4, 5, 4, 3, 2])))
     print("Result:" + str(get_max_unique_subarray_sum([3, 4, 2, 4, 7])))
     print("Result:" + str(get_max_unique_subarray_sum([3, 4, 2, 4, 7, 7])))
 
     print("Result:" + str(get_max_unique_subarray_sum_alternate([])))
-    print("Result:" + str(get_max_unique_subarray_sum_alternate([4,2,4,5,6])))
-    print("Result:" + str(get_max_unique_subarray_sum_alternate([4,2,4,5,6,4])))
+    print("Result:" + str(get_max_unique_subarray_sum_alternate([4, 2, 4, 5, 6])))
+    print("Result:" + str(get_max_unique_subarray_sum_alternate([4, 2, 4, 5, 6, 4])))
     print("Result:" + str(get_max_unique_subarray_sum_alternate([6, 4, 5, 4, 3, 2])))
     print("Result:" + str(get_max_unique_subarray_sum_alternate([3, 4, 2, 4, 7])))
     print("Result:" + str(get_max_unique_subarray_sum_alternate([3, 4, 2, 4, 7, 7])))

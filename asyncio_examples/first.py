@@ -18,21 +18,20 @@ async def start_async_tasks():
     # executing multiple task concurrently.
     # using the `gather` API to execute all the tasks without waiting for each one to complete.
     # but the await is only returned when all tasks are completed.
-    result = await asyncio.gather(count_task(),
-                         count_task(),
-                         count_task(),
-                         count_task()
-                         )
+    result = await asyncio.gather(
+        count_task(), count_task(), count_task(), count_task()
+    )
     print(f"completed executing all tasks....: {result}")
 
 
 def main():
     import time
+
     start = time.perf_counter()
     asyncio.run(start_async_tasks())
     elapsed = time.perf_counter() - start
     print(f"{__file__} executed in {elapsed} seconds")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

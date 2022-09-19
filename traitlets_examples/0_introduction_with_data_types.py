@@ -24,7 +24,6 @@ class StrictStudent(traitlets.HasTraits):
 
 
 class TestStrictStudent(unittest.TestCase):
-
     def test_default(self):
         with self.assertRaises(Exception) as cm:
             Student()
@@ -39,11 +38,13 @@ class TestStrictStudent(unittest.TestCase):
         with self.assertRaises(Exception) as cm:
             stud = StrictStudent(1, {"name": "RahulG"})
         ex = str(cm.exception)
-        self.assertTrue("The 'studName' trait of a StrictStudent instance expected "
-                        "a unicode string, not the dict" in ex)
+        self.assertTrue(
+            "The 'studName' trait of a StrictStudent instance expected "
+            "a unicode string, not the dict" in ex
+        )
+
 
 class TestStudent(unittest.TestCase):
-
     def test_create(self):
         stud = Student(1, "Rahulg")
         self.assertEqual(stud.studId, 1)

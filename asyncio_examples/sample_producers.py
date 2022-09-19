@@ -27,8 +27,10 @@ async def consumer_task(name: int, q: asyncio.Queue):
         print(f"Processing item {item} from producer {p_name}")
         await asyncio.sleep(random.randint(0, 3))
         now = time.perf_counter()
-        print(f"Consumer {name} processed task <{item}>"
-              f" in {now - insert_time:0.5f} seconds.")
+        print(
+            f"Consumer {name} processed task <{item}>"
+            f" in {now - insert_time:0.5f} seconds."
+        )
         q.task_done()  # since we are waiting on the  my_queue.join() we need to make task_completed.
 
 
@@ -68,6 +70,8 @@ async def main():
     print(f"Number of running tasks: {asyncio.all_tasks()}")
 
 
-if __name__ == '__main__':
-    asyncio.run(main())  # this will only retunr once the function has completed. # its like await main()
+if __name__ == "__main__":
+    asyncio.run(
+        main()
+    )  # this will only retunr once the function has completed. # its like await main()
     print("DOne..")

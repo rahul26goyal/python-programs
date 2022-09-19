@@ -1,4 +1,3 @@
-
 def run_lists():
     print("Learning python list..")
 
@@ -25,5 +24,5 @@ def run_lists():
     sample_list.copy()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     run_lists()

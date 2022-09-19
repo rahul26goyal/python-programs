@@ -9,5 +9,5 @@ def dummy():
     print("Dummy imports")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     dummy()
