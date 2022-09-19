@@ -1,11 +1,9 @@
-
 import unittest
 
 from array.binary_search import binary_search
 
 
 class TestBinarySearch(unittest.TestCase):
-
     def test_lower_boundry(self):
         input, expected, num = [5, 10, 15, 20], 0, 5
         result = binary_search(input, num)
@@ -69,4 +67,3 @@ class TestBinarySearch(unittest.TestCase):
         input, expected, num = [5, 10, 15, 20, 25], -1, 24
         result = binary_search(input, num)
         self.assertEqual(expected, result)
-

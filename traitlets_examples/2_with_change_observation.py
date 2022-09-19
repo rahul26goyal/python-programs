@@ -32,7 +32,6 @@ class EmployeeObservation(HasTraits):
 
 
 class TestEmployeeObservation(unittest.TestCase):
-
     def test_change_salary_trigger(self):
         emp = EmployeeObservation(123, "rahul")
         self.assertFalse(emp.change_triggered)

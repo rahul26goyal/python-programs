@@ -20,7 +20,6 @@ class DefaultStudent(HasTraits):
 
 
 class TestDefaultStudent(unittest.TestCase):
-
     def test_default(self):
         s1 = DefaultStudent()
         self.assertTrue(s1.student_id == 12345)

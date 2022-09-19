@@ -16,16 +16,8 @@ def _binary_search_impl(arr, start, end, ele):
         if arr[mid] == ele:
             return mid
         elif ele < arr[mid]:
-            return _binary_search_impl(arr, start, mid-1, ele)
+            return _binary_search_impl(arr, start, mid - 1, ele)
         elif ele > arr[mid]:
             return _binary_search_impl(arr, mid + 1, end, ele)
     else:
         return -1
-
-
-
-
-
-
-
-

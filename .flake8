@@ -1,0 +1,9 @@
+[flake8]
+ignore =
+    # ignore line length as black will fix it.
+    E501
+exclude =
+    .cache,
+    .github,
+    docs,
+    setup.py

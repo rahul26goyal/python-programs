@@ -11,8 +11,8 @@ def swap_num_elements(arr, num, si, sj):
 
     for i in range(0, num):
         temp = arr[si + i]
-        arr[si + i] = arr[sj+ i]
+        arr[si + i] = arr[sj + i]
         arr[sj + i] = temp
 
-    #print("arr:", arr)
+    # print("arr:", arr)
     return arr

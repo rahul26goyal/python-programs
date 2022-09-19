@@ -1,1 +1,7 @@
-traitlets=5.0.5
+traitlets==5.0.5
+
+# code style /dev dependencies
+pycodestyle  # validates if code is PEP 8 complient
+black  # enforeces PEP8
+flake8
+pre-commit

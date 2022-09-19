@@ -11,6 +11,3 @@ def find_element(numbers, element):
         return -1
     else:
         return -1
-
-
-
