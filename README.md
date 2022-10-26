@@ -8,7 +8,12 @@ To unit test the code, I have used `unittest` package provided by default.
 
 Tests are writte inside `tests` package.
 
+## Python Conda env
 
+```python
+conda env export > environment.yml
+ conda env create --file environment.yml
+```
 ## Code Style
 Python [PEP 8](https://peps.python.org/pep-0008/)  is a document that provides guidelines and best practices on how to write Python code.
 
