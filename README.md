@@ -54,3 +54,23 @@ Now, whenever you commit, all the pre-commit hooks will be run one after the oth
 Other alternative tools can be found [here](https://github.com/pycqa/pycodestyle/wiki/RelatedTools).
 1. isort: A tool to sort the import in your python files. Black also does this for you.
 2.
+
+
+## Boto3 type annotation for auto completed
+https://youtype.github.io/boto3_stubs_docs/#vscode-extension
+```python
+python -m pip install 'boto3-stubs[essential]'
+pip install 'boto3-stubs[ecs]'
+```
+
+```python
+pip install emoji
+```
+
+```python
+pip install prettytable
+```
+# stats
+```python
+pip install numpy
+```

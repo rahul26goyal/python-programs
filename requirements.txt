@@ -5,3 +5,4 @@ pycodestyle  # validates if code is PEP 8 complient
 black  # enforeces PEP8
 flake8
 pre-commit
+emoji
